@@ -25,8 +25,31 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-.hirdancer{
-  border:10px solid blue;
-  border-radius:10px;
+.nikDancer{
+  background: url(dancer-images/nikDancer.jpg);
+  height: 115px;
+  width: 115px;
+  border: none;
+  position:absolute;
+}
+.jamesDancer{
+  background: url(dancer-images/jamesDancer.jpg);
+  height: 93px;
+  width: 86px;
+  border: none;
+  position:absolute;
+}
+.jonathanDancer{
+  background: url(dancer-images/jonathanDancer.jpg);
+  height: 90px;
+  width: 90px;
+  border: none;
+  position:absolute;
+}
+.hunterDancer{
+  background: url(dancer-images/hunterDancer.jpg);
+  height: 81px;
+  width: 98px;
+  border: none;
   position:absolute;
 }
