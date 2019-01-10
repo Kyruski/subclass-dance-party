@@ -18,16 +18,37 @@ $(document).ready(function() {
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-    console.log(dancerMakerFunctionName);
 
     // make a dancer with a random positionß
 
-    var dancerFunction = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+    var dancerInstance = new dancerMakerFunction(
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancerFunction.$node);
+    $('body').append(dancerInstance.$node);
+    window.dancers.push(dancerInstance);
+    console.log('dancers 1 are ', dancerInstance.$node);
+    console.log('dancers are ', window.dancers);
   });
+
+  // $('.lineDancersUp').on('click', function(event) {
+  //   var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+
+  //   // get the maker function for the kind of dancer we're supposed to make
+  //   var dancerMakerFunction = window[dancerMakerFunctionName];
+
+  //   // make a dancer with a random positionß
+
+  //   var dancerInstance = new dancerMakerFunction(
+  //     $("body").height() * Math.random(),
+  //     $("body").width() * Math.random(),
+  //     Math.random() * 1000
+  //   );
+  //   $('body').append(dancerInstance.$node);
+  //   window.dancers.push(dancerInstance);
+  //   console.log('dancers are ', window.dancers);
+  // });
+
 });
 
