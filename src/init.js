@@ -28,9 +28,22 @@ $(document).ready(function() {
     );
     $('body').append(dancerInstance.$node);
     window.dancers.push(dancerInstance);
-    console.log('dancers 1 are ', dancerInstance.$node);
-    console.log('dancers are ', window.dancers);
   });
+
+  $('.couchButton').on('click', function(event) {
+    // makes couch visible
+    let topValue = $('body').height() - 275;
+    let leftValue = $('body').width() - 275;
+    $('.couch').css('visibility', 'visible');
+    // attracts all James images 
+    $('span.jamesDancer').animate({
+      top: topValue,
+      left: leftValue
+    }, 5000);
+
+
+  });
+
 
   // $('.lineDancersUp').on('click', function(event) {
   //   var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
