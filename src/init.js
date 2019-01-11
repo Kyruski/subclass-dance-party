@@ -20,10 +20,19 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random positionß
+    
+    let hValue = $('body').height() * Math.random();
+    let wValue = $('body').width() * Math.random();
+    if ($('body').height() - hValue < 100) {
+      hValue -= 100;
+    }
+    if ($('body').width() - wValue < 100) {
+      wValue -= 100;
+    }
 
     var dancerInstance = new dancerMakerFunction(
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(),
+      hValue,
+      wValue,
       Math.random() * 1000
     );
     $('body').append(dancerInstance.$node);
